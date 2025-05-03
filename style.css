@@ -1,0 +1,278 @@
+/* Reset and Base */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+  
+* {
+    scrollbar-width: none;
+    -ms-overflow-style: none;
+}
+  
+*::-webkit-scrollbar {
+    display: none;
+}
+body {
+    font-family: 'Raleway', sans-serif;
+    background-color: #111;
+    color: #e0e0e0;
+    line-height: 1.6;
+}
+  
+.container {
+    width: 90%;
+    max-width: 1100px;
+    margin: 0 auto;
+}
+  
+  /* Typography */
+h1, h2, h3 {
+    font-family: 'Noto Serif Display', serif;
+    font-weight: 700;
+    color: #f4f4f4;
+}
+  
+h2 {
+    font-size: 2.5rem;
+    margin-bottom: 1rem;
+}
+  
+p {
+    font-size: 1.1rem;
+    max-width: 600px;
+    color: #ccc;
+}
+  
+  /* Navbar */
+.navbar {
+    background-color: #1a1a1a;
+    border-bottom: 1px solid #333;
+    padding: 0rem 0;
+}
+  
+.navbar .container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+  
+.logo {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+    cursor: default;
+}
+
+.logo div{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+.logo .eng{
+    align-items: start;
+}
+
+.logo .arab{
+    align-items: end;
+}
+
+.logo .arab h1{
+    font-size: 1.8rem;
+    font-family: 'Aref Ruqaa';
+    color: white;
+    font-weight: 600;
+    margin: 0;
+}
+
+.logo .arab p{
+    font-size: 1.2rem;
+    margin: 0;
+    font-family: 'Fustat';
+    color: white;
+    font-weight: 200;
+}
+
+.logo .eng h1{
+    font-size: 1.8rem;
+    /* font-family: 'Caudex'; */
+    color: white;
+    font-weight: 600;
+    margin: 0;
+}
+
+.logo .eng p{
+    font-size: 0.8rem;
+    margin: 0;
+    font-family: 'Raleway';
+    color: white;
+    font-weight: 500;
+}
+
+.logo img{
+    height: 6rem;
+    filter: invert(0%);
+}
+  
+.nav-links a {
+    margin-left: 2rem;
+    text-decoration: none;
+    color: #ccc;
+    font-weight: 500;
+    transition: color 0.3s ease;
+}
+  
+.nav-links a:hover {
+    color: #e6c392;
+}
+  
+  /* Hero Section */
+.hero {
+    /* padding: 6rem 0; */
+    height: calc(100vh - 97px);
+    max-width: 100vw;
+    box-sizing: border-box;
+    overflow: hidden;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    background: linear-gradient(to right, #191919, #1e1e1e);
+    text-align: center;
+}
+  
+.hero p {
+    margin: 1rem auto 2rem;
+}
+
+.about{
+    height: calc(100vh - 97px);
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+    overflow: hidden;
+}
+
+.about img{
+    width: 40%;
+    height: 100%;
+    object-fit:cover
+}
+
+.about .container{
+    width: 60%;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    background: linear-gradient(to right, #191919, #1e1e1e);
+    text-align: center;
+}
+  
+.cta-button {
+    padding: 0.8rem 2rem;
+    font-size: 1rem;
+    text-decoration: none;
+    background-color: #e6c392;
+    color: #111;
+    border-radius: 4px;
+    transition: background-color 0.3s ease;
+}
+  
+.cta-button:hover {
+    background-color: #d4ac6e;
+}
+
+.services {
+    padding: 60px 20px;
+    text-align: center;
+    background-color: #141414;
+}
+  
+.services .service-item {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin: 30px 0;
+}
+  
+.services .service-content {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    max-width: 1000px;
+    margin: 0 20px;
+}
+  
+.services .service-image {
+    width: 200px;
+    height: 200px;
+    margin-right: 30px;
+    object-fit: cover;
+    border-radius: 5px;
+}
+  
+.services .service-text {
+    max-width: 600px;
+    text-align: left;
+}
+.service-text.switch{
+    margin-right: 30px;
+}
+.service-image.switch{
+    margin-right: 0px;
+}
+
+
+.services h2 {
+    font-size: 2.2rem;
+    margin-bottom: 30px;
+    font-weight: 700;
+}
+  
+  
+  /* Footer */
+.footer {
+    padding: 2rem 0;
+    background-color: #1a1a1a;
+    color: #888;
+    font-size: 0.9rem;
+    border-top: 1px solid #333;
+}
+
+footer div{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+.footer p{
+    text-align: center;
+}
+  
+  /* Responsive */
+@media (max-width: 768px) {
+    .navbar .container {
+        justify-content: start;
+    }
+    
+    .nav-links {
+        margin-top: 1rem;
+    }
+    
+    .nav-links a {
+        display: inline-block;
+        margin: 0 1rem;
+    }
+    .logo .arab{
+        display: none;
+    }
+}
+
+
+  
