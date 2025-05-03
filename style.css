@@ -117,13 +117,29 @@ p {
     height: 6rem;
     filter: invert(0%);
 }
-  
+
+.nav-links{
+    margin-top: 20px;
+    display: flex;
+    flex-direction: column;
+}
+
 .nav-links a {
-    margin-left: 2rem;
+    /* margin-left: 2rem; */
+    font-family: 'Raleway';
+    font-size: 1.4rem;
     text-decoration: none;
     color: #ccc;
-    font-weight: 500;
+    font-weight: 400;
     transition: color 0.3s ease;
+    margin: 4px 0;
+}
+
+.nav-links .selected{
+    font-family: 'Raleway';
+    color: #d4ac6e;
+    font-weight: 600;
+    font-size: 1.5rem;
 }
   
 .nav-links a:hover {
@@ -352,6 +368,159 @@ footer div{
     align-self: flex-end;
 }
 
+.navbar .nav{
+    position: absolute;
+    height: 2.5rem;
+    right: 2rem;
+    filter: invert(100%);
+    cursor: pointer;
+}
+
+.sidebar {
+    position: fixed;
+    top: 0;
+    right: 0;
+    transform: translateX(100%);
+    width: 300px;
+    height: 100%;
+    background-color: #333;
+    color: white;
+    padding: 20px;
+    transition: transform 0.3s ease-in-out;
+    z-index: 1000;
+}
+
+.sidebar.open {
+    transform: translateX(0%);
+}
+
+.sidebar .close{
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: start;
+    cursor: pointer;
+}
+
+.sidebar .close img{
+    filter: invert(100%);
+    height: 1.2rem;
+    margin-right: 6px;
+}
+
+.sidebar .close {
+    color: white;
+    font-family: 'Raleway';
+    font-weight: 600;
+}
+
+
+#thefirm{
+    position: relative;
+    background: #1a1a1a;
+}
+
+#thefirm .container{
+    z-index: 1;
+}
+
+#thefirm img{
+    position: absolute;
+    /* height: 100%; */
+    bottom: 0;
+    width: 50%;
+    object-fit: cover;
+    filter: invert(100%);
+    z-index: 0;
+}
+
+.values{
+    height: calc(100vh - 97px);
+    position: relative;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+    overflow: hidden;
+}
+
+.values h2 span{
+    font-family: 'Raleway';
+    font-weight: 300;
+}
+
+.values img{
+    width: 40%;
+    height: 100%;
+    object-fit:cover
+}
+
+.values .container{
+    width: 60%;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    background: linear-gradient(to right, #191919, #1e1e1e);
+    text-align: start;
+}
+
+.values .value-grid{
+    display: flex;
+    flex-direction: column;
+    align-items: start;
+    justify-content: start;
+}
+
+
+.values .container h3{
+    font-family: 'Raleway';
+    font-weight: 600;
+}
+
+
+.leadership{
+    height: calc(100vh - 97px);
+    position: relative;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+    overflow: hidden;
+}
+
+.leadership h2 span{
+    font-family: 'Raleway';
+    font-weight: 300;
+}
+
+.leadership img{
+    width: 40%;
+    height: 100%;
+    object-fit:cover
+}
+
+.leadership .container{
+    width: 60%;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    background: linear-gradient(to right, #191919, #1e1e1e);
+    text-align: start;
+}
+
+
+
+
+
+
+
+
+
+
 
   /* Responsive */
 
@@ -371,6 +540,8 @@ footer div{
     .logo .arab{
         display: none !important;
     }
+    .values .container,
+    .leadership .container,
     .about .container{
         width: 100% !important;
         backdrop-filter: blur(10px) !important;
@@ -379,6 +550,8 @@ footer div{
         z-index: 1 !important;
         padding: 0 20px !important;
     }
+    .values img,
+    .leadership img,
     .about img{
         width: 100% !important;
         height: 100% !important;
@@ -395,4 +568,15 @@ footer div{
         /* height: 100px !important; */
         display: none !important;
     }
+    #thefirm img{
+        width: 100% !important;
+    }
+    
 }
+@media (max-width: 500px){
+    .sidebar{
+        width: 100% !important;
+    }
+}
+
+

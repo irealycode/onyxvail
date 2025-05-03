@@ -17,15 +17,15 @@
       <div class="logo" >
         <div class="arab" >
           <h1>العقيق الأسود</h1>
-          <p>تأسست عام 1911</p>
+          <p>تأسست عام 1956</p>
         </div>
         <img src="./images/logo.png" />
         <div clasa="eng" >
           <h1>Onyx Veil</h1>
-          <p>Founded in 1911</p>
+          <p>Founded in 1956</p>
         </div>
-        
       </div>
+      <img id="toggleBtn" src="./images/bar.svg" class="nav" />
       <!-- <nav class="nav-links">
         <a href="#">About</a>
         <a href="#">Strategy</a>
@@ -35,15 +35,43 @@
     </div>
   </header>
 
+  <div class="sidebar" id="sidebar">
+    <div id="closeBtn" class="close" >
+      <img src="images/close.svg" />
+      <p>Close</p>
+    </div>
+    <div class="nav-links" >
+      <a class="selected" href="#">
+        Home
+      </a>
+      <a href="thefirm.html">
+        The Firm
+      </a>
+      <a href="#dashboard">
+        Strategies
+      </a>
+      <a href="#dashboard">
+        Research
+      </a>
+      <a href="#dashboard">
+        Contact
+      </a>
+      <a href="#dashboard">
+        Carriers
+      </a>
+    </div>
+    <!-- <div></div> -->
+  </div>
+
   <section id="topo" class="hero">
     <div  class="container">
       <h2>Where Legacy Meets the Sands of Opportunity</h2>
       <p>Onyx Veil is a private hedge fund committed to long-term value through resilient strategies and disciplined capital stewardship.</p>
-      <a href="#" class="cta-button">Learn More</a>
+      <a href="#about" class="cta-button">Learn More</a>
     </div>
   </section>
 
-  <section class="about">
+  <section id="about" class="about">
     <div class="container">
       <h2><span>Inside</span> Onyx Veil</h2>
       <p>At Onyx Veil, we understand the intricacies of managing wealth in today's dynamic financial landscape. Our approach blends tradition and innovation, with an unwavering commitment to performance and integrity.</p>
@@ -53,7 +81,7 @@
 
   <section class="stats">
     <div class="stat" >
-      <h1><span>م</span><span class="sep">i</span>1911</h1>
+      <h1><span>م</span><span class="sep">i</span>1956</h1>
       <h3>Founded by <span>Rochdi Boulaich</span> </h3>
       <h4>Ben Abdssalam</h4>
     </div>
@@ -109,6 +137,7 @@
     </div>
   </footer>
 
+  <script src="./scripts/index.js"></script>
   <script src="./scripts/p5.min.js"></script>
   <script src="./scripts/vanta.topology.min.js"></script>
   <script>
