@@ -149,6 +149,7 @@ p {
 
 .about{
     height: calc(100vh - 97px);
+    position: relative;
     display: flex;
     flex-direction: row;
     align-items: center;
@@ -270,6 +271,30 @@ footer div{
         margin: 0 1rem;
     }
     .logo .arab{
+        display: none;
+    }
+    .about .container{
+        width: 100%;
+        backdrop-filter: blur(10px); /* Apply blur effect */
+        -webkit-backdrop-filter: blur(10px); /* Safari support */
+        background: rgba(0, 0, 0, 0.3);
+        z-index: 1;
+        padding: 0 20px;
+    }
+    .about img{
+        width: 100%;
+        height: 100%;
+        position: absolute;
+        top: 0;
+        left: 0;
+        z-index: 0;
+    }
+    .services{
+        padding: 60px 10px;
+    }
+    .services .service-image{
+        /* width: 100px; */
+        /* height: 100px; */
         display: none;
     }
 }
