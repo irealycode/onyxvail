@@ -13,6 +13,49 @@
 *::-webkit-scrollbar {
     display: none;
 }
+
+@media (max-width: 768px) {
+    .navbar .container {
+        justify-content: start;
+    }
+    
+    .nav-links {
+        margin-top: 1rem;
+    }
+    
+    .nav-links a {
+        display: inline-block;
+        margin: 0 1rem;
+    }
+    .logo .arab{
+        display: none;
+    }
+    .about .container{
+        width: 100%;
+        backdrop-filter: blur(10px);
+        -webkit-backdrop-filter: blur(10px);
+        background: rgba(0, 0, 0, 0.3);
+        z-index: 1;
+        padding: 0 20px;
+    }
+    .about img{
+        width: 100%;
+        height: 100%;
+        position: absolute;
+        top: 0;
+        left: 0;
+        z-index: 0;
+    }
+    .services{
+        padding: 60px 10px;
+    }
+    .services .service-image{
+        /* width: 100px; */
+        /* height: 100px; */
+        display: none;
+    }
+}
+
 body {
     font-family: 'Raleway', sans-serif;
     background-color: #111;
@@ -142,6 +185,11 @@ p {
     background: linear-gradient(to right, #191919, #1e1e1e);
     text-align: center;
 }
+
+.hero h2{
+    font-family: 'Raleway';
+    font-weight: 300;
+}
   
 .hero p {
     margin: 1rem auto 2rem;
@@ -155,6 +203,11 @@ p {
     align-items: center;
     justify-content: center;
     overflow: hidden;
+}
+
+.about h2 span{
+    font-family: 'Raleway';
+    font-weight: 300;
 }
 
 .about img{
@@ -233,6 +286,12 @@ p {
     font-size: 2.2rem;
     margin-bottom: 30px;
     font-weight: 700;
+    
+}
+
+.services h2 span{
+    font-family: 'Raleway';
+    font-weight: 300;
 }
   
   
@@ -257,47 +316,81 @@ footer div{
 }
   
   /* Responsive */
-@media (max-width: 768px) {
-    .navbar .container {
-        justify-content: start;
-    }
-    
-    .nav-links {
-        margin-top: 1rem;
-    }
-    
-    .nav-links a {
-        display: inline-block;
-        margin: 0 1rem;
-    }
-    .logo .arab{
-        display: none;
-    }
-    .about .container{
-        width: 100%;
-        backdrop-filter: blur(10px); /* Apply blur effect */
-        -webkit-backdrop-filter: blur(10px); /* Safari support */
-        background: rgba(0, 0, 0, 0.3);
-        z-index: 1;
-        padding: 0 20px;
-    }
-    .about img{
-        width: 100%;
-        height: 100%;
-        position: absolute;
-        top: 0;
-        left: 0;
-        z-index: 0;
-    }
-    .services{
-        padding: 60px 10px;
-    }
-    .services .service-image{
-        /* width: 100px; */
-        /* height: 100px; */
-        display: none;
-    }
+
+
+.stats{
+    width: 100%;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: start;
+    padding: 20px 0;
+    flex-wrap: wrap;
+
 }
 
+.stats .stat{
+    display: flex;
+    flex-direction: column;
+    align-items: start;
+    justify-content: start;
+    min-height: 350px;
+    padding-left: 20px;
+    border-left: 1px solid #d4ac6e;
+    margin: 0px 50px;
+}
 
+.stats .stat h1{
+    font-weight: 400;
+    font-size: 4rem;
+    color: #d4ac6e;
+    position: relative;
+}
+.stats .stat h1 span{
+    font-family: 'Aref Ruqaa';
+}
+
+.stats .stat h1 .sep{
+    font-size: 1px;
+    color: #141414;
+}
+
+.stats .stat .cap{
+    margin-left: 2rem;
+}
+
+.stats .stat h1 .dollar{
+    font-family: 'Noto Serif Display';
+    font-size: 3rem;
+    transform: translateX(-2rem) translateY(0%);
+    position: absolute;
+    font-weight: 500;
+}
+
+.stats .stat h1 .perc{
+    font-size: 2rem;
+    font-weight: 900;
+    margin: 0;
+}
+
+.stats .stat h3{
+    font-family: 'Raleway';
+    font-size: 1.2rem;
+    font-weight: 300;
+    color: white;
+    max-width: 300px;
+}
+.stats .stat h3 span{
+    /* font-family: 'Noto Serif Display'; */
+    font-weight: 700;
+}
+
+.stats .stat h4{
+    font-family: 'Raleway';
+    font-size: 1rem;
+    font-weight: 300;
+    color: white;
+    max-width: 300px;
+    align-self: flex-end;
+}
   
