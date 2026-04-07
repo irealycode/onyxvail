@@ -166,6 +166,17 @@
     transform: translateY(-6px) rotate(-45deg);
   }
 
+.nav-hamburger.nav{
+    position: absolute;
+    top: 33px;
+    right: 29px;
+    transition: 0.3s top;
+}
+
+.nav-hamburger.nav.scrolled{
+    top:29px;
+}
+
   /* Mobile drawer */
   .mobile-drawer {
     display: none;

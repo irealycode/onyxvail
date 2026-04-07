@@ -37,11 +37,13 @@ const cursor = document.getElementById('cursor');
   const nav = document.getElementById('nav');
   const pearl = document.getElementById('pearlEl');
   const heroHeight = window.innerHeight;
-
+  const hamburgerClose = document.getElementById('hamburger-close');
+  
   window.addEventListener('scroll', () => {
     const y = window.scrollY;
     nav.classList.toggle('scrolled', y > 80);
-
+    hamburgerClose.classList.toggle('scrolled', y > 80);
+    
     const progress = Math.min(y / (heroHeight * 0.75), 1);
     const opacity = 1 - progress;
     const scale = 1 - progress * 0.35;
@@ -63,11 +65,20 @@ const cursor = document.getElementById('cursor');
 
   // Mobile drawer
   const hamburger = document.getElementById('hamburger');
+  
   const drawer = document.getElementById('mobileDrawer');
 
   hamburger.addEventListener('click', () => {
     const isOpen = drawer.classList.toggle('open');
     hamburger.classList.toggle('open', isOpen);
+    hamburgerClose.classList.toggle('open', isOpen)
+    document.body.style.overflow = isOpen ? 'hidden' : '';
+  });
+
+  hamburgerClose.addEventListener('click', () => {
+    const isOpen = drawer.classList.toggle('open');
+    hamburger.classList.toggle('open', isOpen);
+    hamburgerClose.classList.toggle('open', isOpen)
     document.body.style.overflow = isOpen ? 'hidden' : '';
   });
 
