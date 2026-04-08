@@ -45,14 +45,15 @@
       const y = window.scrollY;
       nav.classList.toggle('scrolled', y > 80);
 
-      const progress = Math.min(y / (heroHeight * 0.75), 1);
-      const opacity = 1 - progress;
-      const scale = 1 - progress * 0.35;
-      const drift = y * 0.22;
+      const progress = Math.min(y / (heroHeight * 0.35), 1);
+      const opacity = 1 - progress * 0.1;
+      const scale = 1 - progress * 0.15;
+      const drift = y * 0.2;
       
       pearl.style.transform = `translate(-50%, calc(-50% + ${drift}px)) scale(${scale})`;
+      pearl.style.transition = "opacity 0.1s";
       pearl.style.opacity = opacity;
-      pearl.style.visibility = progress >= 1 ? 'hidden' : 'visible';
+      // pearl.style.visibility = progress >= 1 ? 'hidden' : 'visible';
 
       if (oldY > y) {
         console.log('going up',ring.style)
@@ -82,14 +83,15 @@
       nav.classList.toggle('scrolled', y > 80);
       hamburgerClose.classList.toggle('scrolled', y > 80);
 
-      const progress = Math.min(y / (heroHeight * 0.75), 1);
-      const opacity = 1 - progress;
-      const scale = 1 - progress * 0.35;
-      const drift = y * 0.22;
+      const progress = Math.min(y / (heroHeight * 0.35), 1);
+      const opacity = 1 - progress * 0.1;
+      const scale = 1 - progress * 0.15;
+      const drift = y * 0.2;
       
       pearl.style.transform = `translate(-50%, calc(-50% + ${drift}px)) scale(${scale})`;
+      pearl.style.transition = "opacity 0.1s";
       pearl.style.opacity = opacity;
-      pearl.style.visibility = progress >= 1 ? 'hidden' : 'visible';
+      // pearl.style.visibility = progress >= 1 ? 'hidden' : 'visible';
     });
   }
 
