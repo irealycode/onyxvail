@@ -754,6 +754,47 @@
   .reveal-delay-2 { transition-delay: 0.22s; }
   .reveal-delay-3 { transition-delay: 0.34s; }
 
+  @media (max-height: 880px) {
+    .pearl-container {
+      width: 280px !important;
+      height: 280px !important;
+    }
+
+    /* HERO */
+    .hero-eyebrow {
+      font-size: 0.5rem;
+      letter-spacing: 0.28em;
+      margin-bottom: 1.8rem;
+    }
+    .hero-title {
+      font-size: clamp(4.5rem, 22vw, 8rem);
+    }
+
+    .hero-eyebrow {
+      font-size: 0.5rem;
+      letter-spacing: 0.28em;
+      margin-bottom: 1.8rem;
+    }
+    .hero-title {
+      font-size: clamp(4.5rem, 22vw, 8rem);
+    }
+    .hero-rule {
+      height: 50px;
+      margin: 2rem auto;
+    }
+    .hero-tagline {
+      font-size: 0.58rem;
+      letter-spacing: 0.2em;
+      line-height: 2;
+      max-width: 22ch;
+      margin-top: -3rem;
+    }
+    .hero-scroll {
+      bottom: 2rem;
+    }
+  }
+
+
   /* =============================================
      MOBILE STYLES
      ============================================= */

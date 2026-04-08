@@ -1,3 +1,4 @@
+  const heroHeight = window.innerHeight;
   const cursor = document.getElementById('cursor');
   const ring = document.getElementById('cursorRing');
   let mx = 0, my = 0, rx = 0, ry = 0;
@@ -33,10 +34,10 @@
     });
   }
 
+  console.log('hL',heroHeight)
   // NAV scroll effect
   const nav = document.getElementById('nav');
   const pearl = document.getElementById('pearlEl');
-  const heroHeight = window.innerHeight;
   const hamburgerClose = document.getElementById('hamburger-close');
   let oldY = 0
   let scrollTimeout;
