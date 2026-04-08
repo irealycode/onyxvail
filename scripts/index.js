@@ -1,4 +1,4 @@
-const cursor = document.getElementById('cursor');
+  const cursor = document.getElementById('cursor');
   const ring = document.getElementById('cursorRing');
   let mx = 0, my = 0, rx = 0, ry = 0;
 
@@ -38,24 +38,46 @@ const cursor = document.getElementById('cursor');
   const pearl = document.getElementById('pearlEl');
   const heroHeight = window.innerHeight;
   const hamburgerClose = document.getElementById('hamburger-close');
-  
+  let oldY = 0
+  let scrollTimeout;
   window.addEventListener('scroll', () => {
     const y = window.scrollY;
     nav.classList.toggle('scrolled', y > 80);
     hamburgerClose.classList.toggle('scrolled', y > 80);
-    
+
     const progress = Math.min(y / (heroHeight * 0.75), 1);
     const opacity = 1 - progress;
     const scale = 1 - progress * 0.35;
     const drift = y * 0.22;
-
+    
     pearl.style.transform = `translate(-50%, calc(-50% + ${drift}px)) scale(${scale})`;
     pearl.style.opacity = opacity;
     pearl.style.visibility = progress >= 1 ? 'hidden' : 'visible';
+    if (!isTouchDevice){
+      if (oldY > y) {
+        console.log('going up',ring.style)
+        ring.style.height = "60px";
+        cursor.style.transform = "translate(-50%,-200%) scale(2.5)"; 
+      }else if (oldY < y){
+        console.log('going down')
+        ring.style.height = "60px";
+        cursor.style.transform = "translate(-50%,100%) scale(2.5)"; 
+
+      }
+      oldY = y;
+
+      clearTimeout(scrollTimeout);
+
+      scrollTimeout = setTimeout(() => {
+        console.log("stable");
+        ring.style.height = "36px"
+        cursor.style.transform = "translate(-50%,-50%) scale(1)"; 
+      }, 150);
+    }
+    
   });
 
   setTimeout(() => { pearl.style.opacity = 1; }, 1800);
-
   // Scroll reveal
   const reveals = document.querySelectorAll('.reveal');
   const observer = new IntersectionObserver(entries => {
