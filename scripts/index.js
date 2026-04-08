@@ -66,13 +66,13 @@
       }
       oldY = y;
 
-      // clearTimeout(scrollTimeout);
+      clearTimeout(scrollTimeout);
 
-      // scrollTimeout = setTimeout(() => {
-      //   console.log("stable");
-      //   ring.style.height = "36px"
-      //   cursor.style.transform = "translate(-50%,-50%) scale(1)"; 
-      // }, 150);
+      scrollTimeout = setTimeout(() => {
+        console.log("stable");
+        ring.style.height = "36px"
+        cursor.style.transform = "translate(-50%,-50%) scale(1)"; 
+      }, 150);
       
     });
       
