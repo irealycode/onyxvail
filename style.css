@@ -304,6 +304,7 @@
     width: 1px; height: 80px;
     background: linear-gradient(to bottom, transparent, var(--gold), transparent);
     margin: 3rem auto;
+    /* margin-bottom: -2rem; */
     opacity: 0;
     /* animation: fadeIn 1s ease 1.2s forwards; */
   }
@@ -317,6 +318,7 @@
     line-height: 2.2;
     opacity: 0;
     animation: fadeUp 1s ease 1.4s forwards;
+    margin-top: 5rem;
   }
   .hero-scroll {
     position: absolute;
